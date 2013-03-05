@@ -1,6 +1,6 @@
 # AxisPhilly App Template
 
-This template helps make simple apps (like [Changes in Crime by Neighborhood](http://apps.axisphilly.org/crime-change/)) by baking out [EJS](https://github.com/visionmedia/ejs) templates into HTML, compiling [SASS](http://sass-lang.com/) to CSS, concatenating and minifying (but not obfuscating!) JS.
+This template helps make simple apps (like [Changes in Crime by Neighborhood](http://apps.axisphilly.org/crime-change/)) by baking out [EJS](https://github.com/visionmedia/ejs) templates into HTML, compiling [SASS](http://sass-lang.com/) to CSS, and linting, concatenating, and minifying (but not obfuscating!) JS.
 
 We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.npr.org/) [app-template](https://github.com/nprapps/app-template).
 
