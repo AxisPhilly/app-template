@@ -30,6 +30,6 @@ Install project dependencies: `$ npm install`
 
 In development, we use an [Express](http://expressjs.com/) server to serve files, compile SASS and templates. 
 
-`$ node server.js`
+To run the server: `$ node server.js`
 
 Then go to [http://0.0.0.0:3000](http://0.0.0.0:3000) in your browser.
