@@ -18,17 +18,13 @@ We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.np
 ### Install Dependencies
 For asset management, templating, building, and testing, we use Node.js and [Grunt](http://www.gruntjs.com).
 
-On OSX, you can use Homebrew to install Node. 
-
-`$ brew install node`
+On OSX, you can use Homebrew to install Node: `$ brew install node`
 
 There is also an install package for OSX and other systems available on the Node [website](http://nodejs.org/download/).
 
-Install the [Grunt](https://github.com/gruntjs/grunt-cli) command line tool:
-`$ npm install -g grunt-cli`
+Install the [Grunt](https://github.com/gruntjs/grunt-cli) command line tool: `$ npm install -g grunt-cli`
 
-Install project dependencies:
-`$ npm install`
+Install project dependencies: `$ npm install`
 
 ### Developing/Running locally
 
