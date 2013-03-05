@@ -4,6 +4,7 @@ var server  = require('./server.js'),
 
 server.routes.get.forEach(function(route, i, arr) {
   request.get('http://0.0.0.0:3000' + route.path, function(err, res, body) {
+    if (err) throw err;
     var fileName = (route.path === '/') ? '/index.html' : route.path.split('/')[1] + '.html';
 
     fs.writeFile('www/' + fileName, body, function(err) {
