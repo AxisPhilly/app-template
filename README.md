@@ -56,7 +56,7 @@ To lint, concatenate, and minify JS files, bake-out the EJS templates into HTML,
 
 The grunt commands can also be run independently:
 
-- Lint JS files: `grunt jshint`
-- Concatenate and minify JS files: `grunt uglify`
-- Compile SASS to CSS: `grunt sass`
-- Bake-out template files: `grunt shell`
+- Lint JS files: `$ grunt jshint`
+- Concatenate and minify JS files: `$ grunt uglify`
+- Compile SASS to CSS: `$ grunt sass`
+- Bake-out template files: `$ grunt shell`
