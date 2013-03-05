@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link type="text/css" rel="stylesheet"  href="css/app.css">
+    <% if(env === 'production') { // concatenated and minified files from js/lib goes here %>
+      <script type="text/javscript" src="js/libraries.min.js"></script>
+    <% } else { // include files from js/lib here %>
+      <script type="text/javscript" src="lib/backbone.0.9.10.js"></script>
+    <% } %>
+  </head>
+  <body>
+    <h1 class="headline">woo!</h1>
+    <p><%= env %></p>
+  </body>
+    <% if(env === 'production') { // minified app.js goes here %>
+      <script type="text/javscript" src="js/app.min.js"></script>
+    <% } else { // include files from js/lib here %>
+      <script type="text/javscript" src="app.js"></script>
+    <% } %>
+</html>
