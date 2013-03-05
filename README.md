@@ -4,8 +4,8 @@
 
 - `css` - compiled .scss files for development
 - `data` - Raw data used in the app, i.e. CSVs
-- 'js' - development versions of JS files
-- 'js\lib' - vendor/library JS files, i.e. underscore.js, backbone.js, etc.
+- `js` - development versions of JS files
+- `js\lib` - vendor/library JS files, i.e. underscore.js, backbone.js, etc.
 - `sass` - .scss files
 - `scripts` -  miscellaneous scripts used for data processing, etc.
 - `views` - EJS templates
