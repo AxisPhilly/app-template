@@ -26,9 +26,9 @@ app.get('/', function(req, res){
   });
 });
 
-app.get('/foo', function(req, res){
+app.get('/embed', function(req, res){
   res.render('index', {
-    title: 'Testing another route!',
+    title: 'Embed template',
     env: app.settings.env
   });
 });
