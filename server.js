@@ -11,12 +11,12 @@ app.set('view engine', 'html');
 // https://github.com/andrew/node-sass
 app.use(sass.middleware({
   src: __dirname + '/sass',
-  dest: __dirname + '/public',
+  dest: __dirname + '/',
   debug: true,
   force: true
 }));
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/css'));
 app.use(express.static(__dirname + '/js'));
 
 app.get('/', function(req, res){
