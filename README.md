@@ -33,3 +33,18 @@ In development, we use an [Express](http://expressjs.com/) server to serve files
 To run the server: `$ node server.js`
 
 Then go to [http://0.0.0.0:3000](http://0.0.0.0:3000) in your browser.
+
+### Add a new route/template
+
+Adding a new page to the app is as simple as adding a route to the Express server and creating a new template.
+
+- Add a new route to Express. At the very least, you have to pass the environment variable to the view. For example:
+
+    app.get('/route-name', function(req, res){
+      res.render('view-name', {
+        env: app.settings.env
+      });
+    });
+
+- Then, create a new template in the `view` folder. The view name is the first parameter of the `res.render` method. The view can just be an `html` file, or it can use EJS to be more dynamic. Just make sure you pass the EJS variables to though the route; which is the second parameter of the `res.render` method.
+
