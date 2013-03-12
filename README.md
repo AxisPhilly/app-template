@@ -1,6 +1,6 @@
 # AxisPhilly App Template
 
-This template helps make simple apps (like our [Changes in Crime by Neighborhood](http://apps.axisphilly.org/crime-change/) map) by baking out [EJS](https://github.com/visionmedia/ejs) templates into HTML, compiling [SASS](http://sass-lang.com/) to CSS, and linting, concatenating, and minifying (but not obfuscating!) JS.
+This template helps make simple apps (like [Changes in Crime by Neighborhood](http://apps.axisphilly.org/crime-change/) and [A License to Blight](http://apps.axisphilly.org/license-to-blight/)) by baking out [EJS](https://github.com/visionmedia/ejs) templates into HTML, compiling [SASS](http://sass-lang.com/) to CSS, and linting, concatenating, and minifying (but not obfuscating!) JS.
 
 We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.npr.org/) [app-template](https://github.com/nprapps/app-template).
 
@@ -16,7 +16,7 @@ We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.np
 - `www` - The compiled app and associated files
 
 ### Install Dependencies
-For asset management, templating, building, and testing, we use Node.js and [Grunt](http://www.gruntjs.com).
+For asset management, templating and building, we use Node.js and [Grunt](http://www.gruntjs.com).
 
 On OSX, you can use Homebrew to install Node: `$ brew install node`
 
@@ -46,7 +46,7 @@ Adding a new page to the app is as simple as adding a route to the Express serve
           });
         });
 
-- Then, create a new template in the `view` folder. The view name is the first parameter of the `res.render` method. The view can just be an `html` file, or it can use EJS to be more dynamic. Just make sure you pass the EJS variables to though the route; which is the second parameter of the `res.render` method.
+- Then, create a new template in the `view` folder. The view name is the first parameter of the `res.render` method. The view can just be an `html` file, or it can use EJS templating to be more dynamic. Just make sure you pass the EJS variables to the route; which is the second parameter of the `res.render` method.
 
 ### Building project
 
