@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       },
       lib: {
         files: {
-          'www/js/libraries.min.js': 'js/lib/*'
+          'www/js/app.libraries.min.js': 'js/lib/*'
         }
       }
     },
