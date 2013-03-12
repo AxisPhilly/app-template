@@ -21,21 +21,22 @@ app.use(express.static(__dirname + '/js'));
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Hello!',
+    title: 'App Title | AxisPhilly',
     env: app.settings.env
   });
 });
 
 app.get('/embed', function(req, res){
   res.render('embed', {
-    title: 'Embed template',
+    title: 'App Title | AxisPhilly',
     env: app.settings.env
   });
 });
 
-app.listen(3000);
+var port = process.env.PORT || 3000;
+app.listen(port);
 
-console.log('Express started on port 3000');
+console.log('Express started on port ' + port);
 
 // make the express server available when this file is required
 module.exports = app;
