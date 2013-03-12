@@ -27,7 +27,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/embed', function(req, res){
-  res.render('index', {
+  res.render('embed', {
     title: 'Embed template',
     env: app.settings.env
   });
