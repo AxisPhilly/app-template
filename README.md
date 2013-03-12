@@ -13,7 +13,8 @@ We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.np
 - `sass` - .scss files
 - `scripts` -  miscellaneous scripts used for data processing, etc.
 - `views` - EJS templates
-- `www` - The compiled app and associated files
+- `www`, `www\css`, `www\js` - The compiled app and associated assets
+- `www\data` - Data (i.e. json) for the app. 
 
 ### Install Dependencies
 For asset management, static view compiling, and building, we use Node.js and [Grunt](http://www.gruntjs.com).
@@ -53,6 +54,8 @@ Adding a new page to the app is as simple as adding a route to the Express serve
 To lint, concatenate, and minify JS files, bake-out the EJS templates into HTML, and compile SASS to CSS for production, run:
 
     $ grunt build
+
+The only manual step is to make sure any data needed for the app is placed in `www\data`. Ideally, output from any data processing scripts should save output here.
 
 The grunt commands can also be run independently:
 
