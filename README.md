@@ -48,7 +48,7 @@ Adding a new page to the app is as simple as adding a route to the Express serve
 
 - Then, create a new template in the `view` folder. The view name is the first parameter of the `res.render` method. The view can just be an `html` file, or it can use EJS templating to be more dynamic. Just make sure you pass the EJS variables to the route; which is the second parameter of the `res.render` method.
 
-### Building project
+### Building a project
 
 To lint, concatenate, and minify JS files, bake-out the EJS templates into HTML, and compile SASS to CSS for production, run:
 
