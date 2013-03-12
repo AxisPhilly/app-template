@@ -1,22 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <% if(env === 'production') { %>
-      <link type="text/css" rel="stylesheet"  href="css/app.css">
-      <script type="text/javscript" src="js/libraries.min.js"></script>
-    <% } else { %>
-      <link type="text/css" rel="stylesheet"  href="app.css">
-      <script type="text/javscript" src="lib/backbone.0.9.10.js"></script>
-    <% } %>
+    <% include _head.html %>
   </head>
   <body>
     <% include _header.html %>
-    <h1 class="headline">woo!</h1>
-    <p><%= env %></p>
+    <section class="row">
+      <p class="twelve columns"><%= env %></p>
+    </section>
   </body>
-    <% if(env === 'production') { %>
-      <script type="text/javscript" src="js/app.min.js"></script>
-    <% } else { %>
-      <script type="text/javscript" src="app.js"></script>
-    <% } %>
+    <% include _footer.html %>
 </html>
