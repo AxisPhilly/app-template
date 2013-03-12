@@ -11,7 +11,7 @@ app.set('view engine', 'html');
 // https://github.com/andrew/node-sass
 app.use(sass.middleware({
   src: __dirname + '/sass',
-  dest: __dirname + '/',
+  dest: __dirname + '/css',
   debug: true,
   force: true
 }));
