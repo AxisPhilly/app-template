@@ -2,17 +2,20 @@ var server  = require('./server.js'),
     fs      = require('fs'),
     request = require('request');
 
+var count=0;
+
 server.routes.get.forEach(function(route, i, arr) {
-  request.get('http://0.0.0.0:3000' + route.path, function(err, res, body) {
+  request.get('http://localhost:' + process.env.PORT + route.path, function(err, res, body) {
     if (err) throw err;
     var fileName = (route.path === '/') ? '/index.html' : route.path.split('/')[1] + '.html';
 
     fs.writeFile('www/' + fileName, body, function(err) {
       if (err) throw err;
-      console.log(fileName + ' saved.');
+      console.log(fileName + ' saved');
+      count++;
 
       // kill the server if we are done
-      if(i === arr.length - 1) { process.exit(0); }
+      if(count === arr.length) { process.exit(0); }
     });
   });
 });
