@@ -7,14 +7,14 @@ We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.np
 ### Directory Structure
 
 - `css` - compiled .scss files for development
-- `data` - Raw data used in the app, i.e. CSVs
+- `data` - Raw data, i.e. CSVs
 - `js` - development versions of JS files
 - `js\lib` - vendor/library JS files, i.e. underscore.js, backbone.js, etc.
 - `sass` - .scss files
 - `scripts` -  miscellaneous scripts used for data processing, etc.
 - `views` - EJS templates
 - `www`, `www\css`, `www\js` - The compiled app and associated assets
-- `www\data` - Data (i.e. JSON) for the app. 
+- `www\data` - Processed data (i.e. JSON) for the app. 
 
 ### Install Dependencies
 For asset management, static view compiling, and building, we use Node.js and [Grunt](http://www.gruntjs.com).
