@@ -55,7 +55,7 @@ To lint, concatenate, and minify JS files, bake-out the EJS templates into HTML,
 
     $ grunt build
 
-The only manual step is to make sure any data needed for the app is placed in `www\data`. Ideally, output from any data processing scripts should save output here.
+The only manual step is to make sure any data needed for the app is placed in `www\data`. Ideally, any data processing scripts should save output here.
 
 The grunt commands can also be run independently:
 
