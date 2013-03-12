@@ -14,7 +14,7 @@ We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.np
 - `scripts` -  miscellaneous scripts used for data processing, etc.
 - `views` - EJS templates
 - `www`, `www\css`, `www\js` - The compiled app and associated assets
-- `www\data` - Data (i.e. json) for the app. 
+- `www\data` - Data (i.e. JSON) for the app. 
 
 ### Install Dependencies
 For asset management, static view compiling, and building, we use Node.js and [Grunt](http://www.gruntjs.com).
