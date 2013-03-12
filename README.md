@@ -63,3 +63,7 @@ The grunt commands can also be run independently:
 - Concatenate and minify JS files: `$ grunt uglify`
 - Compile SASS to CSS: `$ grunt sass`
 - Bake-out template files: `$ grunt shell`
+
+### Deploying
+
+Deploying is a manual task at the moment. Upload the `www` directory to your server, AWS S3, etc.
