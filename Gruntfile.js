@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     },
     shell: {
       build: {
-        command: 'NODE_ENV=production node build.js'
+        command: 'NODE_ENV=production PORT=3001 node build.js'
       }
     }
   });
