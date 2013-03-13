@@ -19,17 +19,17 @@ We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.np
 ### Install Dependencies
 For asset management, static view compiling, and building, we use Node.js and [Grunt](http://www.gruntjs.com).
 
-On OSX, you can use Homebrew to install Node: `$ brew install node`
+On OS X, you can use Homebrew to install Node: `$ brew install node`
 
-There is also an install package for OSX and other systems available on the Node [website](http://nodejs.org/download/).
+There is also an install package for OS X and other systems available on the Node [website](http://nodejs.org/download/).
 
-Install the [Grunt](https://github.com/gruntjs/grunt-cli) command line tool: `$ npm install -g grunt-cli`
+Install the [Grunt](https://github.com/gruntjs/grunt-cli) command line tool globally, with the command line interface: `$ npm install -g grunt-cli`
 
-Install project dependencies: `$ npm install`
+Install project dependencies (in the project folder): `$ npm install`
 
-### Developing/Running locally
+### Development/Working locally
 
-In development, we use an [Express](http://expressjs.com/) server to serve files, compile SASS and render views. 
+For local development, we use an [Express](http://expressjs.com/) server to serve files, compile SASS and render views. 
 
 To run the server: `$ node server.js`
 
@@ -39,7 +39,7 @@ Then go to [http://0.0.0.0:3000](http://0.0.0.0:3000) in your browser.
 
 Adding a new page to the app is as simple as adding a route to the Express server and assigning it a view.
 
-- Add a new route to Express. At the very least, you have to pass the environment variable to the view. For example:
+- Add a new route to Express. At the very least, you have to pass the environment variable to the view, in order to reference development/production resources respectively. For example:
 
         app.get('/route-name', function(req, res){
           res.render('view-name', {
@@ -51,11 +51,11 @@ Adding a new page to the app is as simple as adding a route to the Express serve
 
 ### Building a project
 
-To lint, concatenate, and minify JS files, bake-out the EJS templates into HTML, and compile SASS to CSS for production, run:
+`grunt build` compiles your project in production mode. It will lint, concatenate, and minify JS files, bake-out the EJS templates into HTML, and compile SASS to CSS.
 
     $ grunt build
 
-The only manual step is to make sure any data needed for the app is placed in `www\data`. Ideally, any data processing scripts should save output here.
+Make sure any data needed for the app is placed in `www\data`. Ideally, any data processing scripts should save output here.
 
 The grunt commands can also be run independently:
 
@@ -64,6 +64,6 @@ The grunt commands can also be run independently:
 - Compile SASS to CSS: `$ grunt sass`
 - Bake-out template files: `$ grunt shell`
 
-### Deploying
+### Deployment
 
 Deploying is a manual task at the moment. Upload the `www` directory to your server, AWS S3, etc.
