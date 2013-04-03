@@ -66,4 +66,12 @@ The grunt commands can also be run independently:
 
 ### Deploying
 
-Deploying is a manual task at the moment. Upload the `www` directory to your server, AWS S3, etc.
+Deployment to S3 is handled by grunt. Before you deploy, do the following:
+
+- The value of the `name` key in the `package.json` will be used as the S3 folder name, so make sure it's URL compliant.
+- *Do not add the AWS credentials to the Gruntfile*. Grunt expects environmental variables stored as `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
+- Check all the of `src` and `dest` values in the `s3.upload` key to make sure they are valid. The defaults are `/*`, `/js/*`, `/css/*`, and `/data/*`. Basically, they should match the folder structure of `www`.
+
+Once you checked all of the above, you can deploy the app by running:
+
+    $ grunt deploy

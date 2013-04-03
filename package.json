@@ -5,13 +5,14 @@
     "express": "3.1.0"
   },
   "devDependencies": {
-    "grunt": "~0.4.0",
+    "grunt": "~0.4.1",
     "grunt-shell": "~0.2.1",
     "grunt-contrib-sass": "~0.2.2",
     "grunt-contrib-jshint": "~0.2.0",
     "grunt-contrib-uglify": "~0.1.2",
     "node-sass": "~0.3.0",
     "ejs": "~0.8.3",
-    "request": "~2.14.0"
+    "request": "~2.14.0",
+    "grunt-s3": "~0.1.0"
   }
 }
