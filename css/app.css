@@ -16,7 +16,7 @@ html, body, #map {
   -webkit-box-shadow: 0 1px #b0b1b1;
   box-shadow: 0 1px #b0b1b1; }
   #nav img.logo {
-    padding: 6px; }
+    padding: 6px 13px; }
     @media (max-width: 500px) {
       #nav img.logo {
         height: 100%;
