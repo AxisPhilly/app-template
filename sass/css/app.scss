@@ -20,6 +20,11 @@ html, body, #map {
 
   img.logo {
     padding: 6px;
+
+    @media (max-width: 500px) {
+      height: 100%;
+      padding: 10px;
+    }
   }
 }
 
