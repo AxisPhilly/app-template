@@ -4,6 +4,8 @@ This template helps make simple apps (like [Changes in Crime by Neighborhood](ht
 
 We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.npr.org/) [app-template](https://github.com/nprapps/app-template).
 
+**Checkout the `fullscreen-map` branch for a version of this app template setup for fullscreen maps** 
+
 ### Directory Structure
 
 - `css` - compiled .scss files for development
