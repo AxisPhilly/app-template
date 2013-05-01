@@ -1,9 +1,11 @@
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 html, body, #map {
-  height: 100%; }
+  height: 100%;
+}
 
 #nav {
   background: white;
@@ -11,7 +13,9 @@ html, body, #map {
   z-index: 100;
   height: 50px;
   width: 100%;
-  top: 0; }
+  top: 0;
+}
 
 .leaflet-control-zoom {
-  top: 50px; }
+  top: 50px;
+}

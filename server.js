@@ -11,18 +11,18 @@ app.set('view engine', 'html');
 // https://github.com/andrew/node-sass
 app.use(sass.middleware({
   src: __dirname + '/sass',
-  dest: __dirname + '/css',
+  dest: __dirname,
   debug: true,
   force: true
 }));
 
-app.use(express.static(__dirname + '/css'));
-app.use(express.static(__dirname + '/js'));
-app.use(express.static(__dirname + '/img'));
+app.use('/css', express.static(__dirname + '/css'));
+app.use('/js', express.static(__dirname + '/js'));
+app.use('/img', express.static(__dirname + '/img'));
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'App Title | AxisPhilly',
+    title: 'Fullscreen Map | AxisPhilly',
     env: app.settings.env
   });
 });

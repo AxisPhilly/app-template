@@ -1,5 +1,27 @@
 <% if(env === 'production') { %>
   <script type="text/javascript" src="js/app.min.js"></script>
 <% } else { %>
-  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 <% } %>
+<script type="text/javascript">
+  // Default settings. Zoom and center overridden by URL params, if they exist
+  app.opts = {
+    mapContainer: 'map',
+    tileURL: 'http://api.tiles.mapbox.com/v3/axisphilly.map-fg6flibn.jsonp',
+    mapOptions: {
+      center: [39.99, -75.150],
+      zoom: 12,
+      minZoom: 11,
+      maxZoom: 18,
+      maxBounds: [
+        [39.69, -76.20],
+        [40.60, -74.14]
+      ]
+    }
+  }
+
+  // Kick off map
+  app.initMap(function() {
+    // post map code here
+  });
+</script>
