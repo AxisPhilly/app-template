@@ -32,6 +32,8 @@ app.initMap = function(callback) {
       .addLayer(new wax.leaf.connector(tilejson))
       .setView(mapSettings.center, mapSettings.zoom);
 
+    L.control.zoom({position: 'topright'}).addTo(app.map);
+
     app.map.attributionControl.addAttribution(
         'Map Data: (c) <a href="http://www.openstreetmap.org">OpenStreetMap</a>'
       );
