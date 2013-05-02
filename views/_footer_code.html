@@ -7,7 +7,7 @@
   // Default settings. Zoom and center overridden by URL params, if they exist
   app.opts = {
     mapContainer: 'map',
-    tileURL: 'http://api.tiles.mapbox.com/v3/axisphilly.map-fg6flibn.jsonp',
+    tileURL: 'http://api.tiles.mapbox.com/v3/axisphilly.map-5rf31e6p.jsonp',
     mapOptions: {
       center: [39.99, -75.150],
       zoom: 12,
@@ -24,9 +24,15 @@
   // Kick off map
   app.initMap(function() {
     $('#geolocation').click(function(event){
-      event.stopPropagation();
+      event.preventDefault();
 
-      console.log('hey');
+      $(this).find('img').attr('src', 'img/loading.gif');
+
+      app.getLocation(function(position){
+        app.addMarker(position.coords.latitude, position.coords.longitude);
+
+        $('#geolocation').find('img').attr('src', 'img/marker.png');
+      });
     });
   });
 </script>

@@ -66,3 +66,18 @@ app.updateURL = function() {
 
   location.hash = params;
 };
+
+// HTML5 browser location
+app.getLocation = function(callback) {
+  if (Modernizr.geolocation) {
+    navigator.geolocation.getCurrentPosition(callback);
+  } else {
+    alert('Sorry. Your browser does not support this function.');
+  }
+};
+
+// Add a marker at the given position and zoom to it
+app.addMarker = function(lat, lng) {
+  L.marker([lat, lng]).addTo(app.map);
+  app.map.setView([lat, lng], 18);
+};
