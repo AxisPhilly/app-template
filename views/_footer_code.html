@@ -23,6 +23,10 @@
 
   // Kick off map
   app.initMap(function() {
+    $('#geolocation').click(function(event){
+      event.stopPropagation();
 
+      console.log('hey');
+    });
   });
 </script>

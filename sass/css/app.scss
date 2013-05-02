@@ -7,27 +7,39 @@ html, body, #map {
   height: 100%;
 }
 
-#nav {
+.top-bar {
   top: 0;
   position: fixed;
   z-index: 100;
   width: 100%;
-  height: 50px;
-  padding: 5px 0;
   background-color: #f6f5f7;
   -webkit-box-shadow: 0 1px #b0b1b1;
   box-shadow: 0 1px #b0b1b1;
 
   img.logo {
-    padding: 6px 13px;
-
-    @media (max-width: 500px) {
-      height: 100%;
-      padding: 10px;
-    }
+    height: 60%;
   }
 }
 
 .leaflet-control-zoom {
   top: 50px;
+}
+
+.button {
+  border-style: none;
+  background-color: #95A5A6;
+
+  &:hover {
+    background-color: #FDD441;
+  }
+}
+
+// buttons
+#geolocation {
+  margin-right: 10px;
+
+  img {
+    height: 60%;
+    margin-right: 5px;
+  }
 }
