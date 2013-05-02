@@ -15,9 +15,19 @@ html, body, #map {
   box-shadow: 0 1px #b0b1b1; }
   .top-bar img.logo {
     height: 60%; }
+  .top-bar .button {
+    line-height: 2.4em;
+    top: 5px;
+    height: 2.5em; }
 
 .leaflet-control-zoom {
   top: 50px; }
+
+.leaflet-control-zoom a {
+  height: 40px;
+  width: 40px;
+  font-size: 32px;
+  line-height: 40px; }
 
 .button {
   border-style: none;
