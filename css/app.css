@@ -5,20 +5,22 @@ body {
 html, body, #map {
   height: 100%; }
 
-.top-bar {
+#nav {
   top: 0;
   position: fixed;
   z-index: 100;
   width: 100%;
+  height: 50px;
   background-color: #f6f5f7;
   -webkit-box-shadow: 0 1px #b0b1b1;
   box-shadow: 0 1px #b0b1b1; }
-  .top-bar img.logo {
-    height: 60%; }
-  .top-bar .button {
-    line-height: 2.4em;
-    top: 5px;
-    height: 2.5em; }
+  #nav img.logo {
+    padding: 10px; }
+  #nav .button {
+    line-height: 1.5em;
+    top: 4px;
+    height: 2.6em;
+    font-size: 16px; }
 
 .leaflet-control-zoom {
   top: 50px; }
@@ -36,7 +38,18 @@ html, body, #map {
     background-color: #FDD441; }
 
 #geolocation {
-  margin-right: 10px; }
+  margin-right: 10px;
+  float: right;
+  padding-left: .7em; }
   #geolocation img {
-    height: 60%;
+    height: 100%;
     margin-right: 5px; }
+
+#info {
+  text-indent: 0;
+  top: -4px;
+  height: 40px;
+  width: 40px;
+  line-height: 38px; }
+  #info img {
+    height: 75%; }
