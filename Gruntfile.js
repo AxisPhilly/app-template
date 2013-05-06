@@ -97,8 +97,8 @@ module.exports = function(grunt) {
           dest: '<%= pkg.name %>/img'
         },
         {
-          src: 'www/img/lib/**/**',
-          dest: '<%= pkg.name %>/img/lib'
+          src: 'www/img/leaflet/*',
+          dest: '<%= pkg.name %>/img/leaflet'
         }
       ]
     }

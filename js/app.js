@@ -26,7 +26,7 @@ app.initMap = function(callback) {
 
   wax.tilejson(app.opts.tileURL,
   function(tilejson) {
-    L.Icon.Default.imagePath = 'img/lib/leaflet/';
+    L.Icon.Default.imagePath = 'img/leaflet';
 
     app.map = new L.Map(app.opts.mapContainer, mapSettings)
       .addLayer(new wax.leaf.connector(tilejson))
