@@ -15,6 +15,7 @@
     "ejs": "~0.8.3",
     "request": "~2.14.0",
     "grunt-s3": "~0.1.0",
-    "grunt-contrib-copy": "~0.4.1"
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0"
   }
 }

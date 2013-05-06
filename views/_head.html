@@ -21,15 +21,20 @@
 <!-- Typekit -->
 <script type="text/javascript" src="//use.typekit.net/nuc2aoh.js"></script>
 
-<!-- Leaflet Stylesheets -->
-<link rel="stylesheet" href="css/lib/leaflet.css" />
-<!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/lib/leaflet.ie.css" />
-<![endif]-->
+<% if(env === 'production') { %>
+  <!-- Library stylesheets -->
+  <link type="text/css" rel="stylesheet" href="css/libraries.css">
+<% } else { %>
+  <!-- Foundation Stylesheets -->
+  <link type="text/css" rel="stylesheet" href="css/lib/normalize.css">
+  <link type="text/css" rel="stylesheet" href="css/lib/foundation.min.css">
 
-<!-- Foundation Stylesheets -->
-<link type="text/css" rel="stylesheet" href="css/lib/normalize.css">
-<link type="text/css" rel="stylesheet" href="css/lib/foundation.min.css">
+  <!-- Leaflet Stylesheets -->
+  <link rel="stylesheet" href="css/lib/leaflet.css" />
+  <!--[if lte IE 8]>
+      <link rel="stylesheet" href="css/lib/leaflet.ie.css" />
+  <![endif]-->
+<% } %>
 
 <!-- App Stylesheet -->
 <link type="text/css" rel="stylesheet" href="css/app.css">
