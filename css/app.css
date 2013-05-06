@@ -49,8 +49,8 @@ html, body, #map {
       display: block; } }
   @media (max-width: 360px) {
     #info {
-      padding-right: 0em;
-      padding-left: 0em; } }
+      padding-right: 0.2em;
+      padding-left: 0.2em; } }
 
 #browser-description {
   width: 250px;
