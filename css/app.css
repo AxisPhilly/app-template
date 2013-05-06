@@ -16,29 +16,15 @@ html, body, #map {
   box-shadow: 0 1px #b0b1b1; }
   #nav img.logo {
     padding: 10px; }
+    @media (max-width: 360px) {
+      #nav img.logo {
+        margin-top: 3px;
+        width: 60%; } }
   #nav .button {
     line-height: 1.5em;
     top: 4px;
     height: 2.6em;
     font-size: 16px; }
-
-.leaflet-control-zoom {
-  top: 50px; }
-
-.leaflet-control-zoom a {
-  height: 40px;
-  width: 40px;
-  font-size: 32px;
-  line-height: 40px; }
-
-.button {
-  border-style: none;
-  background-color: #95A5A6; }
-  .button:hover {
-    background-color: #FDD441; }
-
-.reveal-modal {
-  z-index: 9999; }
 
 .top-bar-button {
   margin-right: 10px;
@@ -61,3 +47,50 @@ html, body, #map {
   @media (max-width: 960px) {
     #info {
       display: block; } }
+  @media (max-width: 360px) {
+    #info {
+      padding-right: 0em;
+      padding-left: 0em; } }
+
+#browser-description {
+  width: 250px;
+  z-index: 99;
+  position: absolute;
+  left: 10px;
+  top: 48px;
+  padding: 10px;
+  border: solid 1px #b0b1b1;
+  border-radius: 3px; }
+  @media (max-width: 960px) {
+    #browser-description {
+      display: none; } }
+
+
+.description {
+  background-color: #fff;
+  font-size: 14px; }
+  .description h2 {
+    font-size: 24px;
+    margin: 2px 0; }
+  .description .byline {
+    margin: 6px 0; }
+
+.leaflet-control-zoom {
+  top: 50px; }
+
+.leaflet-control-zoom a {
+  height: 40px;
+  width: 40px;
+  font-size: 32px;
+  line-height: 40px; }
+
+.button {
+  border-style: none;
+  background-color: #95A5A6; }
+  .button:hover {
+    background-color: #FDD441; }
+
+.reveal-modal {
+  z-index: 9999;
+  box-shadow: none;
+  -webkit-box-shadow: none; }

@@ -7,6 +7,7 @@ html, body, #map {
   height: 100%;
 }
 
+// TOPBAR
 #nav {
   top: 0;
   position: fixed;
@@ -19,6 +20,11 @@ html, body, #map {
 
   img.logo {
     padding: 10px;
+
+    @media(max-width: 360px) {
+      margin-top: 3px;
+      width: 60%;
+    }
   }
 
   .button {
@@ -27,32 +33,6 @@ html, body, #map {
     height: 2.6em;
     font-size: 16px;
   }
-}
-
-// LEAFLET OVERRIDES
-.leaflet-control-zoom {
-  top: 50px;
-}
-
-.leaflet-control-zoom a {
-  height: 40px;
-  width: 40px;
-  font-size: 32px;
-  line-height: 40px;
-}
-
-.button {
-  border-style: none;
-  background-color: #95A5A6;
-
-  &:hover {
-    background-color: #FDD441;
-  }
-}
-
-// FOUNDATION OVERRIDES
-.reveal-modal {
-  z-index: 9999
 }
 
 // BUTTONS
@@ -85,4 +65,71 @@ html, body, #map {
   @media(max-width: 960px) {
     display: block;
   }
+
+  @media(max-width: 360px) {
+    padding-right: 0em;
+    padding-left: 0em;
+  }
+}
+
+// DESCRIPTION
+#browser-description {
+  width: 250px;
+  z-index: 99;
+  position: absolute;
+  left: 10px;
+  top: 48px;
+  padding: 10px;
+  border: solid 1px #b0b1b1;
+  border-radius: 3px;
+
+  @media(max-width: 960px) {
+    display: none;
+  }
+}
+
+#mobile-description {
+
+}
+
+.description {
+  background-color: #fff;
+  font-size: 14px;
+
+  h2 {
+    font-size: 24px;
+    margin: 2px 0;
+  }
+
+  .byline {
+    margin: 6px 0;
+  }
+}
+
+// LEAFLET OVERRIDES
+.leaflet-control-zoom {
+  top: 50px;
+}
+
+.leaflet-control-zoom a {
+  height: 40px;
+  width: 40px;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.button {
+  border-style: none;
+  background-color: #95A5A6;
+
+  &:hover {
+    background-color: #FDD441;
+  }
+}
+
+// FOUNDATION OVERRIDES
+.reveal-modal {
+  z-index: 9999;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
