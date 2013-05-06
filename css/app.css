@@ -5,8 +5,7 @@ body {
 html, body, #map {
   height: 100%; }
 
-#nav {
-  top: 0;
+.bar {
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -14,33 +13,54 @@ html, body, #map {
   background-color: #f6f5f7;
   -webkit-box-shadow: 0 1px #b0b1b1;
   box-shadow: 0 1px #b0b1b1; }
-  #nav img.logo {
-    padding: 10px; }
-    @media (max-width: 360px) {
-      #nav img.logo {
-        margin-top: 3px;
-        width: 60%; } }
-  #nav .button {
+  .bar .button {
     line-height: 1.5em;
     top: 4px;
     height: 2.6em;
     font-size: 16px; }
 
-.top-bar-button {
+#top-nav {
+  top: 0; }
+  #top-nav img.logo {
+    padding: 10px; }
+    @media (max-width: 360px) {
+      #top-nav img.logo {
+        margin-top: 3px;
+        width: 60%; } }
+
+#bottom-nav {
+  bottom: 0;
+  border-top: solid 1px #b0b1b1;
+  display: none; }
+  @media (max-width: 960px) {
+    #bottom-nav {
+      display: block; } }
+
+.nav-button {
   margin-right: 10px;
   float: right;
   padding-left: .7em; }
-  .top-bar-button img {
+  .nav-button img {
     height: 100%;
     margin-right: 5px; }
 
 @media (max-width: 960px) {
   #geolocation {
     display: none; } }
+#geolocation.bottom {
+  display: block; }
+  @media (min-width: 960px) {
+    #geolocation.bottom {
+      display: none; } }
 
 @media (max-width: 960px) {
   #embed {
     display: none; } }
+#embed.bottom {
+  display: block; }
+  @media (min-width: 960px) {
+    #embed.bottom {
+      display: none; } }
 
 #info {
   display: none; }
@@ -89,6 +109,10 @@ html, body, #map {
   background-color: #95A5A6; }
   .button:hover {
     background-color: #FDD441; }
+
+@media (max-width: 960px) {
+  .leaflet-control-attribution {
+    bottom: 50px; } }
 
 .reveal-modal {
   z-index: 9999;

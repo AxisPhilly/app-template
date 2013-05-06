@@ -7,9 +7,8 @@ html, body, #map {
   height: 100%;
 }
 
-// TOPBAR
-#nav {
-  top: 0;
+// NAV BARS
+.bar {
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -17,15 +16,6 @@ html, body, #map {
   background-color: #f6f5f7;
   -webkit-box-shadow: 0 1px #b0b1b1;
   box-shadow: 0 1px #b0b1b1;
-
-  img.logo {
-    padding: 10px;
-
-    @media(max-width: 360px) {
-      margin-top: 3px;
-      width: 60%;
-    }
-  }
 
   .button {
     line-height: 1.5em;
@@ -35,8 +25,31 @@ html, body, #map {
   }
 }
 
+#top-nav {
+  top: 0;
+
+  img.logo {
+    padding: 10px;
+
+    @media(max-width: 360px) {
+      margin-top: 3px;
+      width: 60%;
+    }
+  }
+}
+
+#bottom-nav {
+  bottom: 0;
+  border-top: solid 1px #b0b1b1;
+  display: none;
+
+  @media(max-width: 960px) {
+    display:block;
+  }
+}
+
 // BUTTONS
-.top-bar-button {
+.nav-button {
   margin-right: 10px;
   float: right;
   padding-left: .7em;
@@ -51,11 +64,27 @@ html, body, #map {
   @media(max-width: 960px) {
     display: none;
   }
+
+  &.bottom {
+    display: block;
+
+    @media(min-width: 960px) {
+      display: none;
+    }
+  }
 }
 
 #embed {
   @media(max-width: 960px) {
     display: none;
+  }
+
+  &.bottom {
+    display: block;
+
+    @media(min-width: 960px) {
+      display: none;
+    }
   }
 }
 
@@ -124,6 +153,12 @@ html, body, #map {
 
   &:hover {
     background-color: #FDD441;
+  }
+}
+
+.leaflet-control-attribution {
+  @media(max-width: 960px) {
+    bottom: 50px;
   }
 }
 
