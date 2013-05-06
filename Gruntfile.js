@@ -44,13 +44,18 @@ module.exports = function(grunt) {
           'css/lib/foundation.min.css',
           'css/lib/leaflet.css'
           ],
-        dest: 'www/css/libraries.css'
+        dest: 'www/css/app.libraries.css'
       }
     },
     copy: {
       main: {
         files: [
+          // Even though most of the files in css/lib and js/lib 
+          // are concatenated into app.libraries.css and app.libararies.js, respectively,
+          // we'll copy the individuals files to www so that conditional css files
+          // and to js libraries like modernizr can still be referenced individually
           {expand: true, src: ['css/lib/*'], dest: 'www/'},
+          {expand: true, src: ['js/lib/*'], dest: 'www/'},
           {expand: true, src: ['img/lib/**'], dest: 'www/'},
           {expand: true, src: ['img/**'], dest: 'www/'}
         ]
@@ -76,6 +81,10 @@ module.exports = function(grunt) {
           dest: '<%= pkg.name %>/js'
         },
         {
+          src: 'www/js/lib/*',
+          dest: '<%= pkg.name %>/js/lib'
+        },
+        {
           src: 'www/css/*',
           dest: '<%= pkg.name %>/css'
         },
@@ -84,8 +93,12 @@ module.exports = function(grunt) {
           dest: '<%= pkg.name %>/data'
         },
         {
-          src: 'www/img/**',
+          src: 'www/img/*',
           dest: '<%= pkg.name %>/img'
+        },
+        {
+          src: 'www/img/lib/**/**',
+          dest: '<%= pkg.name %>/img/lib'
         }
       ]
     }

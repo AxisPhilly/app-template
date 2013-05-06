@@ -21,9 +21,14 @@
 <!-- Typekit -->
 <script type="text/javascript" src="//use.typekit.net/nuc2aoh.js"></script>
 
+<!-- Conditional leaflet library -->
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/lib/leaflet.ie.css" />
+<![endif]-->
+
 <% if(env === 'production') { %>
   <!-- Library stylesheets -->
-  <link type="text/css" rel="stylesheet" href="css/libraries.css">
+  <link type="text/css" rel="stylesheet" href="css/app.libraries.css">
 <% } else { %>
   <!-- Foundation Stylesheets -->
   <link type="text/css" rel="stylesheet" href="css/lib/normalize.css">
@@ -31,9 +36,6 @@
 
   <!-- Leaflet Stylesheets -->
   <link rel="stylesheet" href="css/lib/leaflet.css" />
-  <!--[if lte IE 8]>
-      <link rel="stylesheet" href="css/lib/leaflet.ie.css" />
-  <![endif]-->
 <% } %>
 
 <!-- App Stylesheet -->
