@@ -50,7 +50,7 @@ html, body, #map {
 }
 
 // BUTTONS
-#geolocation {
+.top-bar-button {
   margin-right: 10px;
   float: right;
   padding-left: .7em;
@@ -61,14 +61,16 @@ html, body, #map {
   }
 }
 
-#info {
-  text-indent: 0;
-  top: -4px;
-  height: 40px;
-  width: 40px;
-  line-height: 38px;
+#geolocation {
+  @media(max-width: 960px) {
+    display: none;
+  }
+}
 
-  img {
-    height: 75%;
+#info {
+  display: none;
+
+  @media(max-width: 960px) {
+    display: block;
   }
 }
