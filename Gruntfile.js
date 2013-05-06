@@ -17,7 +17,13 @@ module.exports = function(grunt) {
       },
       lib: {
         files: {
-          'www/js/app.libraries.min.js': 'js/lib/*'
+          'www/js/app.libraries.min.js': [
+            'js/lib/underscore.js',
+            'js/lib/leaflet.js',
+            'js/lib/wax.leaf.js',
+            'js/lib/foundation.js',
+            'js/lib/foundation.reveal.js'
+          ]
         }
       }
     },
@@ -33,7 +39,11 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['css/lib/*'],
+        src: [
+          'css/normalize.css',
+          'css/lib/foundation.min.css',
+          'css/lib/leaflet.css'
+          ],
         dest: 'www/css/libraries.css'
       }
     },
