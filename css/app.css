@@ -37,6 +37,9 @@ html, body, #map {
   .button:hover {
     background-color: #FDD441; }
 
+.reveal-modal {
+  z-index: 9999; }
+
 .top-bar-button {
   margin-right: 10px;
   float: right;
@@ -47,6 +50,10 @@ html, body, #map {
 
 @media (max-width: 960px) {
   #geolocation {
+    display: none; } }
+
+@media (max-width: 960px) {
+  #embed {
     display: none; } }
 
 #info {

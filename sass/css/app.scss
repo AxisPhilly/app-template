@@ -29,6 +29,7 @@ html, body, #map {
   }
 }
 
+// LEAFLET OVERRIDES
 .leaflet-control-zoom {
   top: 50px;
 }
@@ -49,6 +50,11 @@ html, body, #map {
   }
 }
 
+// FOUNDATION OVERRIDES
+.reveal-modal {
+  z-index: 9999
+}
+
 // BUTTONS
 .top-bar-button {
   margin-right: 10px;
@@ -62,6 +68,12 @@ html, body, #map {
 }
 
 #geolocation {
+  @media(max-width: 960px) {
+    display: none;
+  }
+}
+
+#embed {
   @media(max-width: 960px) {
     display: none;
   }
