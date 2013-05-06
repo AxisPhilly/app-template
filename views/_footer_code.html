@@ -1,11 +1,5 @@
-
 <!-- Libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
-<script>
-  document.write('<script src=/js/lib/'
-    + ('__proto__' in {} ? 'zepto' : 'jquery')
-    + '.js><\/script>');
-</script>
 <% if(env === 'production') { %>
   <script type="text/javascript" src="js/app.libraries.min.js"></script>
 <% } else { %>
@@ -16,7 +10,7 @@
   <script type="text/javascript" src="js/lib/foundation.reveal.js"></script>
 <% } %>
 
-<!-- Init foundation -->
+<!-- Init Foundation -->
 <script type="text/javascript">
   $(function(){
     $(document).foundation();    
