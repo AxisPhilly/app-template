@@ -60,7 +60,7 @@ html, body, #map {
   }
 }
 
-#geolocation {
+.find-user {
   @media(max-width: 960px) {
     display: none;
   }
@@ -74,7 +74,7 @@ html, body, #map {
   }
 }
 
-#embed {
+.embed {
   @media(max-width: 960px) {
     display: none;
   }
@@ -88,7 +88,7 @@ html, body, #map {
   }
 }
 
-#info {
+.info {
   display: none;
 
   @media(max-width: 960px) {
@@ -158,7 +158,7 @@ html, body, #map {
 
 .leaflet-control-attribution {
   @media(max-width: 960px) {
-    bottom: 50px;
+    display: none;
   }
 }
 

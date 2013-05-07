@@ -45,30 +45,30 @@ html, body, #map {
     margin-right: 5px; }
 
 @media (max-width: 960px) {
-  #geolocation {
+  .find-user {
     display: none; } }
-#geolocation.bottom {
+.find-user.bottom {
   display: block; }
   @media (min-width: 960px) {
-    #geolocation.bottom {
+    .find-user.bottom {
       display: none; } }
 
 @media (max-width: 960px) {
-  #embed {
+  .embed {
     display: none; } }
-#embed.bottom {
+.embed.bottom {
   display: block; }
   @media (min-width: 960px) {
-    #embed.bottom {
+    .embed.bottom {
       display: none; } }
 
-#info {
+.info {
   display: none; }
   @media (max-width: 960px) {
-    #info {
+    .info {
       display: block; } }
   @media (max-width: 360px) {
-    #info {
+    .info {
       padding-right: 0.2em;
       padding-left: 0.2em; } }
 
@@ -112,7 +112,7 @@ html, body, #map {
 
 @media (max-width: 960px) {
   .leaflet-control-attribution {
-    bottom: 50px; } }
+    display: none; } }
 
 .reveal-modal {
   z-index: 9999;

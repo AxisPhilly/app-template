@@ -44,7 +44,7 @@
   // Kick off map
   app.initMap(function() {
     // Button events
-    $('#geolocation').click(function(event){
+    $('.find-user').click(function(event){
       event.preventDefault();
 
       $(this).find('img').attr('src', 'img/loading.gif');
@@ -52,17 +52,17 @@
       app.getLocation(function(position){
         app.addMarker(position.coords.latitude, position.coords.longitude);
 
-        $('#geolocation').find('img').attr('src', 'img/marker.png');
+        $('.find-user').find('img').attr('src', 'img/marker.png');
       });
     });
 
-    $('#info').click(function(event){
+    $('.info').click(function(event){
       event.preventDefault();
 
       $('#infoModal').foundation('reveal', 'open');
     });
 
-    $('#embed').click(function(event){
+    $('.embed').click(function(event){
       event.preventDefault();
 
       $('#embedModal code').html('<code>&lt;iframe width="100%" height="600" src="' + document.URL + '/embed.html" frameborder="0"></iframe></code>');
