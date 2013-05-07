@@ -181,7 +181,11 @@ html, body, #map {
 
 // LEAFLET OVERRIDES
 .leaflet-control-zoom {
-  top: 70px;
+  top: 50px;
+
+  @media(max-width: 940px) {
+    top: 70px;
+  }
 }
 
 .leaflet-control-zoom a {

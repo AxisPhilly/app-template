@@ -131,7 +131,10 @@ html, body, #map {
     margin: 6px 0; }
 
 .leaflet-control-zoom {
-  top: 70px; }
+  top: 50px; }
+  @media (max-width: 940px) {
+    .leaflet-control-zoom {
+      top: 70px; } }
 
 .leaflet-control-zoom a {
   height: 40px;
