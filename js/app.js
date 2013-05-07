@@ -100,7 +100,7 @@ app.geocodeRequest = function(address) {
 
 // Plot the geocode response on the map, or 
 // alert the user if there was an error
-app.processGeocodeResponse = function(resp, callback) {
+app.processGeocodeResponse = function(resp) {
   if(resp.length !== 0) {
     app.addMarker(resp[0].lat, resp[0].lon);
   } else {

@@ -117,12 +117,14 @@ html, body, #map {
     @media (min-width: 960px) {
       .search.bottom {
         display: none; } }
+  .search img {
+    height: 70%; }
   .search input {
     float: right;
-    margin: 4px -2px 0 0;
+    margin: 5px -2px 0 0;
     padding-left: .7em;
     border-radius: 3px;
-    height: 42px;
+    height: 41px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;

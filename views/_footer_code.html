@@ -56,17 +56,26 @@
       });
     });
 
-    $('.search button').click(function(event){
+    // Once a geocode request is back and processed,
+    // this function is called for clean up
+    app.geocodeDoneCallback = function() {
+      $('.search').find('img').attr('src', 'img/search.png');
+    }
+
+    $('.search.top button').click(function(event){
       event.preventDefault();
 
       $(this).find('img').attr('src', 'img/loading.gif');
       var address = $('.search').find('input').val();
 
-      // Once the geocode request is back and process,
-      // this function is called for clean up
-      app.geocodeDoneCallback = function() {
-        $('.search').find('img').attr('src', 'img/search.png');
-      }
+      app.geocodeRequest(address);
+    });
+
+    $('.search.bottom button').click(function(event){
+      event.preventDefault();
+
+      $(this).find('img').attr('src', 'img/loading.gif');
+      var address = $('.search.bottom').find('input').val();
 
       app.geocodeRequest(address);
     });

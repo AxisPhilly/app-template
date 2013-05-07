@@ -161,12 +161,16 @@ html, body, #map {
     }
   }
 
+  img {
+    height: 70%;
+  }
+
   input {
     float: right;
-    margin: 4px -2px 0 0;
+    margin: 5px -2px 0 0;
     padding-left: .7em;
     border-radius: 3px;
-    height: 42px;
+    height: 41px;
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
             box-shadow: none;
