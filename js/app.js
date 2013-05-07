@@ -81,3 +81,32 @@ app.addMarker = function(lat, lng) {
   L.marker([lat, lng]).addTo(app.map);
   app.map.setView([lat, lng], 18);
 };
+
+// Send @address to the Nomatim geocoding service
+app.geocodeRequest = function(address) {
+  var url = 'http://open.mapquestapi.com/nominatim/v1/search.php?' +
+            'format=json&json_callback=app.processGeocodeResponse&q=' + encodeURIComponent(address) +
+            '&viewbox=40.125%2C-75.407%2C39.834%2C-75.017' +
+            '&limit=1';
+
+  $.ajax({
+    url: url,
+    dataType : "jsonp",
+    success: function(resp) {
+      app.processGeocodeResponse(resp);
+    }
+  });
+};
+
+// Plot the geocode response on the map, or 
+// alert the user if there was an error
+app.processGeocodeResponse = function(resp, callback) {
+  if(resp.length !== 0) {
+    app.addMarker(resp[0].lat, resp[0].lon);
+  } else {
+    window.alert('Sorry, your search did have any results. ' +
+      'Please try searching again or zooming to the location.');
+  }
+
+  if (app.geocodeDoneCallback && typeof app.geocodeDoneCallback === 'function') { app.geocodeDoneCallback(); }
+};

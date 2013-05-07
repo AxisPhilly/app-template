@@ -144,6 +144,52 @@ html, body, #map {
   }
 }
 
+// SEARCH FORM
+.search {
+  display: inline-block;
+  float: right;
+
+  @media(max-width: 960px) {
+    display: none;
+  }
+
+  &.bottom {
+    display: block;
+
+    @media(min-width: 960px) {
+      display: none;
+    }
+  }
+
+  input {
+    float: right;
+    margin: 4px -2px 0 0;
+    padding-left: .7em;
+    border-radius: 3px;
+    height: 42px;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    border: 1px solid #ccc;
+    color: #444;
+
+    &:focus {
+      border-color: #FDD441;
+      box-shadow: 0 0px 1px #FDD441 inset, 0 0 1px #FDD441;
+      outline: 0;
+      outline-width: 0;
+    }
+  }
+
+  button.find {
+    float: right;
+    font-size: 100%;
+    padding: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
 // DESCRIPTION
 #browser-description {
   width: 250px;
