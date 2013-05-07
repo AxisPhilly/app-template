@@ -117,8 +117,6 @@ html, body, #map {
     @media (min-width: 960px) {
       .search.bottom {
         display: none; } }
-  .search img {
-    height: 70%; }
   .search input {
     float: right;
     margin: 5px -2px 0 0;
@@ -130,6 +128,9 @@ html, body, #map {
     box-shadow: none;
     border: 1px solid #ccc;
     color: #444; }
+    @media (max-width: 360px) {
+      .search input {
+        height: 26px; } }
     .search input:focus {
       border-color: #FDD441;
       box-shadow: 0 0px 1px #FDD441 inset, 0 0 1px #FDD441;
@@ -141,6 +142,14 @@ html, body, #map {
     padding: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
+    @media (max-width: 360px) {
+      .search button.find {
+        height: 1.7em; } }
+    .search button.find img {
+      height: 40px; }
+      @media (max-width: 360px) {
+        .search button.find img {
+          height: 30px; } }
 
 #browser-description {
   width: 250px;

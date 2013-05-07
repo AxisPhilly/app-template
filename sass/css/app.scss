@@ -161,10 +161,6 @@ html, body, #map {
     }
   }
 
-  img {
-    height: 70%;
-  }
-
   input {
     float: right;
     margin: 5px -2px 0 0;
@@ -176,6 +172,10 @@ html, body, #map {
             box-shadow: none;
     border: 1px solid #ccc;
     color: #444;
+
+    @media(max-width: 360px) {
+      height: 26px;
+    }
 
     &:focus {
       border-color: #FDD441;
@@ -191,6 +191,18 @@ html, body, #map {
     padding: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+
+    @media(max-width: 360px) {
+      height: 1.7em;
+    }
+
+    img {
+      height: 40px;
+
+      @media(max-width: 360px) {
+        height: 30px;
+      }
+    }
   }
 }
 
