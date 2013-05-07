@@ -85,6 +85,10 @@ html, body, #map {
     @media(min-width: 960px) {
       display: none;
     }
+
+    @media(max-width: 360px) {
+      display: none;
+    }
   }
 }
 
@@ -145,6 +149,12 @@ html, body, #map {
   width: 40px;
   font-size: 32px;
   line-height: 40px;
+}
+
+.leaflet-control-zoom {
+  @media(max-width: 360px) {
+    display: none;
+  }
 }
 
 .button {

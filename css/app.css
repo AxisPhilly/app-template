@@ -61,6 +61,9 @@ html, body, #map {
   @media (min-width: 960px) {
     .embed.bottom {
       display: none; } }
+  @media (max-width: 360px) {
+    .embed.bottom {
+      display: none; } }
 
 .info {
   display: none; }
@@ -103,6 +106,10 @@ html, body, #map {
   width: 40px;
   font-size: 32px;
   line-height: 40px; }
+
+@media (max-width: 360px) {
+  .leaflet-control-zoom {
+    display: none; } }
 
 .button {
   border-style: none;
