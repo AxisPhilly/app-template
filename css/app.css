@@ -1,6 +1,9 @@
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  color: #444; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    color: #444; }
 
 html, body, #map {
   height: 100%; }
@@ -44,6 +47,25 @@ html, body, #map {
   @media (max-width: 960px) {
     #bottom-nav {
       display: block; } }
+
+#title-bar {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 25px;
+  top: 51px;
+  background: #fff;
+  opacity: 0.8;
+  border-bottom: solid 1px #b0b1b1;
+  display: none;
+  padding: 4px 10px;
+  font-size: 14px; }
+  @media (max-width: 960px) {
+    #title-bar {
+      display: block; } }
+  @media (max-width: 360px) {
+    #title-bar {
+      top: 36px; } }
 
 .nav-button {
   margin-right: 10px;
@@ -90,6 +112,7 @@ html, body, #map {
   position: absolute;
   left: 10px;
   top: 48px;
+  opacity: 0.9;
   padding: 10px;
   border: solid 1px #b0b1b1;
   border-radius: 3px; }
@@ -108,7 +131,7 @@ html, body, #map {
     margin: 6px 0; }
 
 .leaflet-control-zoom {
-  top: 50px; }
+  top: 70px; }
 
 .leaflet-control-zoom a {
   height: 40px;
@@ -131,6 +154,7 @@ html, body, #map {
     display: none; } }
 
 .reveal-modal {
+  color: #444;
   z-index: 9999;
   box-shadow: none;
   -webkit-box-shadow: none; }
