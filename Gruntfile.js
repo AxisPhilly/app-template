@@ -22,7 +22,8 @@ module.exports = function(grunt) {
             'js/lib/leaflet.js',
             'js/lib/wax.leaf.js',
             'js/lib/foundation.js',
-            'js/lib/foundation.reveal.js'
+            'js/lib/foundation.reveal.js',
+            'js/lib/fastclick.js'
           ]
         }
       }

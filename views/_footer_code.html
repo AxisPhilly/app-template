@@ -8,12 +8,14 @@
   <script type="text/javascript" src="js/lib/wax.leaf.js"></script>
   <script type="text/javascript" src="js/lib/foundation.js"></script>
   <script type="text/javascript" src="js/lib/foundation.reveal.js"></script>
+  <script type="text/javascript" src="js/lib/fastclick.js"></script>
 <% } %>
 
-<!-- Init Foundation -->
+<!-- Init Foundation and Fast Click-->
 <script type="text/javascript">
   $(document).ready(function(){
-    $(document).foundation();    
+    $(document).foundation();
+    FastClick.attach(document.body);
   });
 </script>
 
