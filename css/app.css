@@ -132,7 +132,7 @@ html, body, #map {
 
 .leaflet-control-zoom {
   top: 50px; }
-  @media (max-width: 940px) {
+  @media (max-width: 960px) {
     .leaflet-control-zoom {
       top: 70px; } }
 
