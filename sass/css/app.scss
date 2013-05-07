@@ -152,7 +152,7 @@ html, body, #map {
 }
 
 .leaflet-control-zoom {
-  @media(max-width: 360px) {
+  @media(max-width: 640px) {
     display: none;
   }
 }
