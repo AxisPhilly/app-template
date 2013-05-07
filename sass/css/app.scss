@@ -22,6 +22,17 @@ html, body, #map {
     top: 4px;
     height: 2.6em;
     font-size: 16px;
+
+    @media(max-width: 360px) {
+      line-height: 1.1em;
+      top: 4px;
+      height: 1.9em;
+      font-size: 14px;
+    }
+  }
+
+  @media(max-width: 360px) {
+    height: 35px;
   }
 }
 
@@ -32,8 +43,8 @@ html, body, #map {
     padding: 10px;
 
     @media(max-width: 360px) {
-      margin-top: 3px;
-      width: 60%;
+      margin-top: 0px;
+      width: 150px;
     }
   }
 }
@@ -177,4 +188,10 @@ html, body, #map {
   z-index: 9999;
   box-shadow: none;
   -webkit-box-shadow: none;
+}
+
+.button.small {
+  @media(max-width: 360px) {
+    padding-top: 0.425em;
+  }
 }

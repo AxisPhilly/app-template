@@ -18,6 +18,15 @@ html, body, #map {
     top: 4px;
     height: 2.6em;
     font-size: 16px; }
+    @media (max-width: 360px) {
+      .bar .button {
+        line-height: 1.1em;
+        top: 4px;
+        height: 1.9em;
+        font-size: 14px; } }
+  @media (max-width: 360px) {
+    .bar {
+      height: 35px; } }
 
 #top-nav {
   top: 0; }
@@ -25,8 +34,8 @@ html, body, #map {
     padding: 10px; }
     @media (max-width: 360px) {
       #top-nav img.logo {
-        margin-top: 3px;
-        width: 60%; } }
+        margin-top: 0px;
+        width: 150px; } }
 
 #bottom-nav {
   bottom: 0;
@@ -107,7 +116,7 @@ html, body, #map {
   font-size: 32px;
   line-height: 40px; }
 
-@media (max-width: 360px) {
+@media (max-width: 640px) {
   .leaflet-control-zoom {
     display: none; } }
 
@@ -125,3 +134,7 @@ html, body, #map {
   z-index: 9999;
   box-shadow: none;
   -webkit-box-shadow: none; }
+
+@media (max-width: 360px) {
+  .button.small {
+    padding-top: 0.425em; } }
