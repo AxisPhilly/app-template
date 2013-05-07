@@ -43,7 +43,7 @@ html, body, #map {
     padding: 10px;
 
     @media(max-width: 360px) {
-      margin-top: 0px;
+      margin-top: -1px;
       width: 150px;
     }
   }
