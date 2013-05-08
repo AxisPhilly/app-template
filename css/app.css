@@ -132,7 +132,7 @@ html, body, #map {
     @media (max-width: 360px) {
       .search input {
         height: 26px;
-        font-size: 12px; } }
+        font-size: 11px; } }
     .search input:focus {
       border-color: #FDD441;
       box-shadow: 0 0px 1px #FDD441 inset, 0 0 1px #FDD441;
