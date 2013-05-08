@@ -38,7 +38,9 @@ app.initMap = function(callback) {
         'Map Data: (c) <a href="http://www.openstreetmap.org">OpenStreetMap</a>'
       );
 
-    app.setEvents();
+    if(mapSettings.urlPosition === true) {
+      app.setEvents();
+    }
 
     if(callback && typeof callback === 'function') { callback(); }
   });
