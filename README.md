@@ -18,6 +18,16 @@ We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.np
 - `www`, `www\css`, `www\js` - The compiled app and associated assets
 - `www\data` - Processed data (i.e. JSON) for the app. 
 
+### Initialize Template
+    git clone git@github.com:AxisPhilly/app-template.git
+    cd path/to/repo
+    rm -rf .git 
+    git init
+    git add * .gitignore
+    git commit -m "Import app template"
+    git remote add origin git@github.com:AxisPhilly/repo-name.git
+    git push -u origin master
+
 ### Install Dependencies
 For asset management, static view compiling, and building, we use Node.js and [Grunt](http://www.gruntjs.com).
 
