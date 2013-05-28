@@ -1,7 +1,7 @@
 <!-- Libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
 <% if(env === 'production') { %>
-  <script type="text/javascript" src="js/app.libraries.min.js"></script>
+  <script type="text/javascript" src="js/app.libraries.min.<%= version %>.js"></script>
 <% } else { %>
   <script type="text/javascript" src="js/lib/underscore.js"></script>
   <script type="text/javascript" src="js/lib/leaflet.js"></script>
@@ -21,7 +21,7 @@
 
 <!-- App Code -->
 <% if(env === 'production') { %>
-  <script type="text/javascript" src="js/app.min.js"></script>
+  <script type="text/javascript" src="js/app.min.<%= version %>.js"></script>
 <% } else { %>
   <script type="text/javascript" src="js/app.js"></script>
 <% } %>

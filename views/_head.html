@@ -28,7 +28,7 @@
 
 <% if(env === 'production') { %>
   <!-- Library stylesheets -->
-  <link type="text/css" rel="stylesheet" href="css/app.libraries.css">
+  <link type="text/css" rel="stylesheet" href="css/app.libraries.<%= version %>.css">
 <% } else { %>
   <!-- Foundation Stylesheets -->
   <link type="text/css" rel="stylesheet" href="css/lib/normalize.css">
@@ -39,7 +39,11 @@
 <% } %>
 
 <!-- App Stylesheet -->
-<link type="text/css" rel="stylesheet" href="css/app.css">
+<% if(env === 'production') { %>
+  <link type="text/css" rel="stylesheet" href="css/app.<%= version %>.css">
+<% } else { %>
+  <link type="text/css" rel="stylesheet" href="css/app.css">
+<% } %>
 
 <!-- Modernizr -->
 <script type="text/javascript" src="js/lib/modernizr.custom.js"></script>
