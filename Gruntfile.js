@@ -1,3 +1,9 @@
+// For setting expires header
+// Set to 1 year ahead of today
+var d = new Date();
+d.setDate(d.getDate() + 365);
+future = d.toUTCString();
+
 module.exports = function(grunt) {
 
   grunt.initConfig({
@@ -72,6 +78,9 @@ module.exports = function(grunt) {
       secret: process.env.AWS_SECRET_ACCESS_KEY,
       bucket: 'apps.axisphilly.org',
       access: 'public-read',
+      headers: {
+        'Expires': future
+      },
       upload: [
         {
           src: 'www/*',
