@@ -20,12 +20,14 @@ app.use(sass.middleware({
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/js', express.static(__dirname + '/js'));
 app.use('/img', express.static(__dirname + '/img'));
+app.use('/img', express.static(__dirname + '/data'));
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Fullscreen Map | AxisPhilly',
+    title: 'App Title | AxisPhilly',
     env: app.settings.env,
-    version: pkg.version
+    version: pkg.version,
+    name: pkg.name
   });
 });
 
