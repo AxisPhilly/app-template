@@ -90,9 +90,12 @@
     });
 
     $('.embed').click(function(event){
-      event.preventDefault();
+        event.preventDefault();
+        var urlParts = document.URL.split('#'),
+            location = urlParts[1] || '',
+            embedUrl = 'http://apps.axisphilly.org/<%= name %>/embed.html#' + location;
 
-      $('#embedModal code').html('<code>&lt;iframe width="100%" height="600" src="' + document.URL + '/embed.html" frameborder="0"></iframe></code>');
+      $('#embedModal code').html('<code>&lt;iframe width="600" height="600" src="' + embedUrl + '" frameborder="0"></iframe></code>');
       $('#embedModal').foundation('reveal', 'open');
     });
   });
