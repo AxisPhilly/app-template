@@ -19,6 +19,7 @@ app.use(sass.middleware({
 app.use(express.static(__dirname + '/css'));
 app.use(express.static(__dirname + '/js'));
 app.use(express.static(__dirname + '/img'));
+app.use(express.static(__dirname + '/data'));
 
 app.get('/', function(req, res){
   res.render('index', {
