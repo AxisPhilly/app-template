@@ -35,7 +35,8 @@ app.get('/embed', function(req, res){
   res.render('embed', {
     title: 'App Title | AxisPhilly',
     env: app.settings.env,
-    version: pkg.version
+    version: pkg.version,
+    name: pkg.name
   });
 });
 
