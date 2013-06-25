@@ -1,22 +1,29 @@
 # AxisPhilly App Template
 
-This template helps make simple apps (like [Changes in Crime by Neighborhood](http://apps.axisphilly.org/crime-change/) and [A License to Blight](http://apps.axisphilly.org/license-to-blight/)) by baking out [EJS](https://github.com/visionmedia/ejs) templates into HTML, compiling [SASS](http://sass-lang.com/) to CSS, and linting, concatenating, and minifying (but not obfuscating!) JS.
+This template helps make simple apps (like [Changes in Crime by Neighborhood](http://apps.axisphilly.org/crime-change/) and [A License to Blight](http://apps.axisphilly.org/license-to-blight/)) by baking out [EJS](https://github.com/visionmedia/ejs) templates into HTML, compiling [SASS](http://sass-lang.com/) to CSS, linting, concatenating, and minifying (but not obfuscating!) JS, and versioning assets.
 
 We got a lot of inspiration and guidance from the [NPR Apps](http://blog.apps.npr.org/) [app-template](https://github.com/nprapps/app-template).
 
 **Checkout the `fullscreen-map` branch for a version of this app template setup for fullscreen map apps.** 
 
-### Directory Structure
+### File and folder information
 
 - `css` - compiled .scss files for development
+- `css\lib` - vendor css files
 - `data` - Raw data, i.e. CSVs
 - `js` - development versions of JS files
 - `js\lib` - vendor/library JS files, i.e. underscore.js, backbone.js, etc.
+- `img` - images
+- `img\lib` - images for vendor libraries, i.e. leaflet marker image
 - `sass` - .scss files
 - `scripts` -  miscellaneous scripts used for data processing, etc.
 - `views` - EJS templates
-- `www`, `www\css`, `www\js` - The compiled app and associated assets
-- `www\data` - Processed data (i.e. JSON) for the app. 
+- `www`, `www\css`, `www\js`, etc - The compiled app and associated assets
+- `www\data` - Processed data (i.e. JSON) for the app.
+- `build.js` - Script to generate static HTML files from `server.js` routes. Called by Grunt `shell:build` task.
+- `Gruntfile.js` - Grunt file with tasks, i.e. lint, deploy, etc.
+- `package.json` - Node project file. We use the `name` attribute for the production url (i.e. http://apps.axisphilly.org/package-name) and the `version` attribute to version production assets.
+- `server.js` - Express server used for development
 
 ### Initialize Template
     git clone git@github.com:AxisPhilly/app-template.git
