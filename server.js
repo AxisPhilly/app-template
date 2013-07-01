@@ -16,10 +16,10 @@ app.use(sass.middleware({
   force: true
 }));
 
-app.use(express.static(__dirname + '/css'));
-app.use(express.static(__dirname + '/js'));
-app.use(express.static(__dirname + '/img'));
-app.use(express.static(__dirname + '/data'));
+app.use('/css', express.static(__dirname + '/css'));
+app.use('/js', express.static(__dirname + '/js'));
+app.use('/img', express.static(__dirname + '/img'));
+app.use('/data', express.static(__dirname + '/data'));
 
 app.get('/', function(req, res){
   res.render('index', {
