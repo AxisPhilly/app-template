@@ -1,3 +1,9 @@
+// For setting expires header
+// Set to 1 year ahead of today
+var d = new Date();
+d.setDate(d.getDate() + 365);
+future = d.toUTCString();
+
 module.exports = function(grunt) {
 
   grunt.initConfig({
@@ -11,12 +17,12 @@ module.exports = function(grunt) {
       },
       app: {
         files: {
-          'www/js/app.min.js': 'js/app.js'
+          'www/js/app.min.<%= pkg.version %>.js': 'js/app.js'
         }
       },
       lib: {
         files: {
-          'www/js/app.libraries.min.js': 'js/lib/*'
+          'www/js/app.libraries.min.<%= pkg.version %>.js': 'js/lib/*'
         }
       }
     },
@@ -26,7 +32,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'www/css/app.css': 'sass/css/app.scss'
+          'www/css/app.<%= pkg.version %>.css': 'sass/css/app.scss'
         }
       }
     },
@@ -40,6 +46,9 @@ module.exports = function(grunt) {
       secret: process.env.AWS_SECRET_ACCESS_KEY,
       bucket: 'apps.axisphilly.org',
       access: 'public-read',
+      headers: {
+        'Expires': future
+      },
       upload: [
         {
           src: 'www/*',
