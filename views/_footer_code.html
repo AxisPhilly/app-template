@@ -1,5 +1,29 @@
+<!-- Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
 <% if(env === 'production') { %>
-  <script type="text/javascript" src="js/app.min.js"></script>
+  <!-- Compressed, versioned JS library files -->
+  <script type="text/javascript" src="js/app.libraries.min.<%= version %>.js"></script>
 <% } else { %>
-  <script type="text/javascript" src="app.js"></script>
+  <!-- Individual JS library files -->
+  <script type="text/javascript" src="js/lib/foundation.js"></script>
+  <script type="text/javascript" src="js/lib/fastclick.js"></script>
 <% } %>
+
+<!-- Init Foundation and Fast Click-->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(document).foundation();
+    FastClick.attach(document.body);
+  });
+</script>
+
+<!-- App Code -->
+<% if(env === 'production') { %>
+  <script type="text/javascript" src="js/app.min.<%= version %>.js"></script>
+<% } else { %>
+  <script type="text/javascript" src="js/app.js"></script>
+<% } %>
+
+<script type="text/javascript">
+
+</script>
