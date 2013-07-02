@@ -1,5 +1,6 @@
 var express = require('express');
 var sass = require('node-sass');
+var pkg = require('./package.json');
 
 var app = express();
 
@@ -24,14 +25,16 @@ app.use('/data', express.static(__dirname + '/data'));
 app.get('/', function(req, res){
   res.render('index', {
     title: 'App Title | AxisPhilly',
-    env: app.settings.env
+    env: app.settings.env,
+    version: pkg.version
   });
 });
 
 app.get('/embed', function(req, res){
   res.render('embed', {
     title: 'App Title | AxisPhilly',
-    env: app.settings.env
+    env: app.settings.env,
+    version: pkg.version
   });
 });
 
